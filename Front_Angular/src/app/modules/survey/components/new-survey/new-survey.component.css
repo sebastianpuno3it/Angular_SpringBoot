@@ -1,0 +1,8 @@
+.survey-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.survey-container > * {
+    width: 100%;
+}

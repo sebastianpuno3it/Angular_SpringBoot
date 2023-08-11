@@ -1,0 +1,27 @@
+
+<div class="body">
+    <div class="login">
+        
+     <form [formGroup]="form" (ngSubmit)="ingresar">  
+        <h1><a href="/#/dashboard/"><button class mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>reply</mat-icon>
+          </button></a> Encuesta</h1>
+        <br>
+        <mat-form-field class="ancho">
+            <mat-label>Genero</mat-label>
+                <select matNativeControl formControlName="option_voted" required>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Clasica">Clasica</option>
+                <option value="Salsa">Salsa</option>
+                </select>
+         </mat-form-field>
+         <mat-form-field class="ancho">
+                <mat-label >Correo</mat-label>
+                <input matInput autocomplete="off" formControlName="email">
+         </mat-form-field>
+         <button (click)="onSave()" mat-button class="btnguardar ancho" color="primary" [disabled]="form.invalid">Guardar</button>
+     </form>
+    </div>
+</div>
+
